@@ -294,7 +294,7 @@ void switchDirectory(char * newDirectory)
 			// Duplicate so that pointer can be cleaned up
 			directoryParsed = strdup(newDirectory);
 
-			// Skip the below loop as it is not necessary to parse path 
+			// Skip the below loop as it is not necessary to parse path
 			*(newDirectory) = '\0';
 		}
 		else
@@ -363,7 +363,7 @@ void switchDirectory(char * newDirectory)
 				return;
 			}
 		}
-		else 
+		else
 		{
 			if (strchr(newDirectory, '/') == NULL)
 			{
@@ -413,7 +413,7 @@ void switchDirectory(char * newDirectory)
 			currentDirectory = strdup(directoryParsed);
 			if (strstr(currentDirectory, getenv("HOME")) != NULL)
 			{
-				// Duplicate current directory to 
+				// Duplicate current directory to
 				char *tmp = strdup(currentDirectory);
 				// Add ~ character at start of output path
 				strcpy(currentDirectory, "~");
@@ -461,7 +461,7 @@ int sanitiseLine(char * line)
 	//       (?= )      If what lies ahead matches " " literally
 	//       ( \|)      Match the string " |" literally
 	//     )            End IF clause
-	//   )              
+	//   )
 	//   |              Else
 	//    [^ ]+         Match the string " " literally followed by one to unlimited non-space characters
 	// )                End IF clause
