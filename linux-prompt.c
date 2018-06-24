@@ -5,7 +5,7 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <unistd.h>
-#include "ALX_CMD.h"
+#include "linux-prompt.h"
 
 // Global Variable for changing directory
 char * currentDirectory;
